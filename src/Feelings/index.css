@@ -1,0 +1,38 @@
+::placeholder {
+  color: #adadad;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  background-color: #fff;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: #804db3;
+  text-decoration: none;
+}

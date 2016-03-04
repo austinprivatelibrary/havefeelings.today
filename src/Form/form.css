@@ -1,0 +1,33 @@
+input[type="text"],
+button[type="submit"] {
+  display: block;
+  border: 0;
+  border-radius: 3px;
+  padding: 1rem 1.25rem;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+input[type="text"] {
+  appearance: none;
+  width: 100%;
+  border: 1px solid #adadad;
+  background-color: #fff;
+}
+
+button[type="submit"] {
+  transition: all .125s ease-in-out;
+  cursor: pointer;
+  margin: 1rem auto 0;
+  width: 100%;
+  border: 1px solid #804db3;
+  background-color: #804db3;
+  color: #fff;
+}
+
+button[type="submit"]:disabled {
+  cursor: not-allowed;
+  border-color: #804db3;
+  background-color: transparent;
+  color: #804db3;
+}
