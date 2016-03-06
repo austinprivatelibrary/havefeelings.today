@@ -17,4 +17,4 @@ render(
   document.getElementsByTagName('main')[0]
 )
 
-console.log('%chttp://austinprivatelibrary.online', 'color: #804db3;')
+console.log('%c🕶👻', 'font-size: 128px;')
