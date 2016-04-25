@@ -39,7 +39,7 @@
 
 .about-content .hr {
   text-align: center;
-  color: #adadad;
+  color: #AAAAAA;
   letter-spacing: 1rem;
 }
 
@@ -52,11 +52,11 @@
   align-self: flex-end;
   margin-bottom: 1rem;
   padding: .75rem 1.25rem;
-  color: #adadad;
+  color: #AAAAAA;
   font-size: 1rem;
   font-weight: 100;
 }
 
 .about.is-open .about-toggle {
-  color: #804db3;
+  color: #0074D9;
 }

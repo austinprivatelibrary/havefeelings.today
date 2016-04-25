@@ -39,7 +39,7 @@ describe('Feelings', () => {
     Simulate.submit(findRenderedDOMComponentWithTag(feelings, 'form'))
     findRenderedDOMComponentWithClass(feelings, 'display')
   })
-  it('cycles emojis', (done) => {
+  it('cycles emojis', done => {
     const feelings = getFeelings()
     const input = findRenderedDOMComponentWithTag(feelings, 'input')
     input.value = '🌕🌖🌗🌘🌑🌒🌓🌔'

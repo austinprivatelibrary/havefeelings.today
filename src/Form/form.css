@@ -11,7 +11,7 @@ button[type="submit"] {
 input[type="text"] {
   appearance: none;
   width: 100%;
-  border: 1px solid #adadad;
+  border: 1px solid #AAAAAA;
   background-color: #fff;
 }
 
@@ -20,14 +20,14 @@ button[type="submit"] {
   cursor: pointer;
   margin: 1rem auto 0;
   width: 100%;
-  border: 1px solid #804db3;
-  background-color: #804db3;
+  border: 1px solid #0074D9;
+  background-color: #0074D9;
   color: #fff;
 }
 
 button[type="submit"]:disabled {
   cursor: not-allowed;
-  border-color: #804db3;
+  border-color: #0074D9;
   background-color: transparent;
-  color: #804db3;
+  color: #0074D9;
 }

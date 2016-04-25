@@ -1,5 +1,5 @@
 ::placeholder {
-  color: #adadad;
+  color: #AAAAAA;
 }
 
 *:focus {
@@ -33,6 +33,6 @@ body {
 }
 
 a {
-  color: #804db3;
+  color: #0074D9;
   text-decoration: none;
 }
