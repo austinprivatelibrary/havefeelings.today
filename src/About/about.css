@@ -37,12 +37,6 @@
   padding: 1rem 1.25rem;
 }
 
-.about-content .hr {
-  text-align: center;
-  color: #AAAAAA;
-  letter-spacing: 1rem;
-}
-
 .about-toggle {
   z-index: 9001;
   pointer-events: all;

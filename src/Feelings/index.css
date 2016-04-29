@@ -32,6 +32,11 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+em {
+  color: #AAAAAA;
+  font-style: italic;
+}
+
 a {
   color: #0074D9;
   text-decoration: none;
