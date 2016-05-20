@@ -24,7 +24,7 @@ export default class Form extends Component {
         <div className="about-wrapper">
           <div className="about-content">
             <p>Now, with the help of Feelings, you can fill your humdrum face-to-face conversations with the joys of texting – Get your phone out and show them how you really feel!</p>
-            <p><em>Feelings is brought to you by <a href="//flipactual.com">Flip</a>.</em></p>
+            <p><em>Feelings is brought to you by <a href="http://www.flipactual.com">Flip</a>.</em></p>
           </div>
         </div>
         <div
