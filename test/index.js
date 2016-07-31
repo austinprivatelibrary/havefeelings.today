@@ -44,7 +44,7 @@ describe('Feelings', () => {
     Simulate.change(input);
     Simulate.submit(findRenderedDOMComponentWithTag(feelings, 'form'));
     setTimeout(() => {
-      assert.equal(findRenderedDOMComponentWithClass(feelings, 'display').innerHTML, '🌖');
+      assert.equal(findRenderedDOMComponentWithClass(feelings, 'display').innerHTML, '🌓');
       done();
     }, 1000);
   });

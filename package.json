@@ -4,12 +4,12 @@
   "description": "Have Feelings... Today!",
   "main": "index.js",
   "scripts": {
-    "build": "node_modules/.bin/webpack --",
-    "start": "node_modules/.bin/webpack-dev-server --",
-    "test": "node_modules/.bin/babel-node node_modules/.bin/_mocha --",
-    "coverage": "node_modules/.bin/babel-node node_modules/.bin/babel-istanbul cover node_modules/.bin/_mocha --",
+    "build": "./node_modules/.bin/webpack --",
+    "start": "./node_modules/.bin/webpack-dev-server --",
+    "test": "./node_modules/.bin/babel-node ./node_modules/.bin/_mocha --",
+    "coverage": "./node_modules/.bin/babel-node ./node_modules/.bin/babel-istanbul cover ./node_modules/.bin/_mocha --",
     "view-coverage": "open ./coverage/lcov-report/index.html",
-    "lint": "node_modules/.bin/eslint . --"
+    "lint": "./node_modules/.bin/eslint . --"
   },
   "repository": "austinprivatelibrary/havefeelings.today",
   "author": "Flip",

@@ -2,23 +2,23 @@ import React, {
   PropTypes,
 } from 'react';
 
-const Form = props => (
+const Form = ({ doDisplay, setEmojis, hasEmojis }) => (
   <form
     action
     className="form"
     onSubmit={event => {
       event.preventDefault();
-      props.doDisplay();
+      doDisplay();
     }}
   >
     <input
       type="text"
       placeholder="Enter some emojis..."
-      onChange={event => props.setEmojis(event.target.value)}
+      onChange={({ target: { value } }) => setEmojis(value)}
     />
     <button
       type="submit"
-      disabled={!props.hasEmojis}
+      disabled={!hasEmojis}
     >
       Have Feelings
     </button>

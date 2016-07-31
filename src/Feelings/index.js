@@ -17,11 +17,10 @@ export default class Feelings extends Component {
   constructor(props) {
     super(props);
     this.isIos = new MobileDetect(this.props.userAgent).is('iOS');
-    this.initialState = {
+    this.state = this.initialState = {
       displaying: false,
       emojis: [],
     };
-    this.state = this.initialState;
   }
   @autobind
   setEmojis(input) {
