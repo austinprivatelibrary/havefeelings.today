@@ -1,36 +1,40 @@
 import React, {
   Component,
   PropTypes,
-} from 'react'
+} from 'react';
+import { autobind } from 'core-decorators';
 
 export default class Display extends Component {
+  static propTypes = {
+    emojis: PropTypes.arrayOf(PropTypes.string).isRequired,
+    dontDisplay: PropTypes.func.isRequired,
+  }
   constructor(props) {
-    super(props)
-    this.interval = {}
+    super(props);
+    this.interval = {};
     this.state = {
       currentEmoji: '',
-    }
-    this.stop = this.stop.bind(this)
-    return this
+    };
   }
   componentDidMount() {
-    this.start()
-  }
-  start() {
-    var i = 1
-    this.setEmoji(0)
-    this.interval = window.setInterval(() => {
-      this.setEmoji(i++ % this.props.emojis.length)
-    }, 1000)
+    this.start();
   }
   setEmoji(index) {
     this.setState({
       currentEmoji: this.props.emojis[index],
-    })
+    });
   }
+  start() {
+    let i = 1;
+    this.setEmoji(0);
+    this.interval = window.setInterval(() => {
+      this.setEmoji(i++ % this.props.emojis.length);
+    }, 1000);
+  }
+  @autobind
   stop() {
-    window.clearInterval(this.interval)
-    this.props.dontDisplay()
+    window.clearInterval(this.interval);
+    this.props.dontDisplay();
   }
   render() {
     return (
@@ -40,11 +44,6 @@ export default class Display extends Component {
       >
         {this.state.currentEmoji}
       </div>
-    )
+    );
   }
-}
-
-Display.propTypes = {
-  emojis: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-  dontDisplay: React.PropTypes.func.isRequired,
 }

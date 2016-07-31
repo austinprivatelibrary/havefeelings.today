@@ -1,39 +1,45 @@
 import React, {
   Component,
   PropTypes,
-} from 'react'
-import emojiRegex from 'emoji-regex'
-import MobileDetect from 'mobile-detect'
+} from 'react';
+import { autobind } from 'core-decorators';
+import emojiRegex from 'emoji-regex';
+import MobileDetect from 'mobile-detect';
 
-import Display from '../Display'
-import Form from '../Form'
-import About from '../About'
+import Display from '../Display';
+import Form from '../Form';
+import About from '../About';
 
 export default class Feelings extends Component {
+  static propTypes = {
+    userAgent: PropTypes.string.isRequired,
+  }
   constructor(props) {
-    super(props)
-    this.isIos = new MobileDetect(this.props.userAgent).is('iOS')
+    super(props);
+    this.isIos = new MobileDetect(this.props.userAgent).is('iOS');
     this.initialState = {
       displaying: false,
       emojis: [],
-    }
-    this.state = this.initialState
-    this.setEmojis = this.setEmojis.bind(this)
-    this.doDisplay = this.doDisplay.bind(this)
-    this.dontDisplay = this.dontDisplay.bind(this)
+    };
+    this.state = this.initialState;
   }
+  @autobind
   setEmojis(input) {
     this.setState({
       emojis: input.match(emojiRegex()) || [],
-    })
+    });
   }
+  @autobind
   doDisplay() {
-    this.state.emojis.length && this.setState({
-      displaying: true,
-    })
+    if (this.state.emojis.length) {
+      this.setState({
+        displaying: true,
+      });
+    }
   }
+  @autobind
   dontDisplay() {
-    this.setState(this.initialState)
+    this.setState(this.initialState);
   }
   render() {
     return (
@@ -55,10 +61,6 @@ export default class Feelings extends Component {
           <About />
         )}
       </div>
-    )
+    );
   }
-}
-
-Feelings.propTypes = {
-  userAgent: PropTypes.string.isRequired,
 }

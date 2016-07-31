@@ -1,20 +1,20 @@
-import './reset.css'
-import './Feelings/index.css'
-import './Display/display.css'
-import './Form/form.css'
-import './About/about.css'
-
-import React from 'react'
+import React from 'react';
 import {
   render,
-} from 'react-dom'
-import MobileDetect from 'mobile-detect'
+} from 'react-dom';
 
-import Feelings from './Feelings'
+import Feelings from './Feelings';
+
+import './reset.css';
+import './Feelings/index.css';
+import './Display/display.css';
+import './Form/form.css';
+import './About/about.css';
 
 render(
-  <Feelings userAgent={window.navigator.userAgent}/>,
+  <Feelings userAgent={window.navigator.userAgent} />,
   document.getElementsByTagName('main')[0]
-)
+);
 
-console.log('%c🕶👻', 'font-size: 128px;')
+/* eslint-disable no-console */
+console.log('%c🕶👻', 'font-size: 128px;');
