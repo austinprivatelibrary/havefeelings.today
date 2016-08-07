@@ -1,11 +1,10 @@
 parser: babel-eslint
-extends:
-  - airbnb
 parserOptions:
   ecmaVersion: 6
   sourceType: module
   ecmaFeatures:
     experimentalObjectRestSpread: true
     jsx: true
-rules:
-  no-param-reassign: [2, { props: false }]
+env:
+  browser: true
+extends: airbnb
