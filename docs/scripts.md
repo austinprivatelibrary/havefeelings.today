@@ -1,8 +1,3 @@
-# www.havefeelings.today
-
-[![flipactual](https://img.shields.io/badge/😋-flipactual-218AC7.svg?style=flat-square)](https://www.flipactual.com/)
-[![Travis](https://img.shields.io/travis/flipactual/www.havefeelings.today.svg?style=flat-square)](https://travis-ci.org/flipactual/www.havefeelings.today/)
-
 ### `build` – build the app
 
 ```sh
@@ -44,7 +39,3 @@ npm run lint
 ```sh
 npm run write-readme
 ```
-
-## License
-
-MIT @ [Flip](https://github.com/flipactual)

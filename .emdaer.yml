@@ -3,9 +3,10 @@
     style: 'flat-square'
     shields:
       - alt: 'flipactual'
-        image: 'badge/😋-flipactual-43A6F6.svg'
-        link: 'https://flipactual.com/'
+        image: 'badge/😋-flipactual-218AC7.svg'
+        link: 'https://www.flipactual.com/'
       - alt: 'Travis'
         image: 'travis/flipactual/www.havefeelings.today.svg'
         link: 'https://travis-ci.org/flipactual/www.havefeelings.today/'
+- include: './docs/scripts.md'
 - license: true
