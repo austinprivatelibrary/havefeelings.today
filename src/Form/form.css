@@ -2,17 +2,16 @@ input[type="text"],
 button[type="submit"] {
   display: block;
   border: 0;
-  border-radius: 3px;
-  padding: 1rem 1.25rem;
-  font-size: 1.5rem;
-  font-weight: 200;
+  padding: 1rem .75rem;
+  font-size: 20px;
+  text-align: center;
 }
 
 input[type="text"] {
   appearance: none;
   width: 100%;
-  border: 1px solid #AAAAAA;
-  background-color: #fff;
+  border-bottom: 2px solid #E7E7E7;
+  background-color: #FFF;
 }
 
 button[type="submit"] {
@@ -20,14 +19,16 @@ button[type="submit"] {
   cursor: pointer;
   margin: 1rem auto 0;
   width: 100%;
-  border: 1px solid #0074D9;
-  background-color: #0074D9;
-  color: #fff;
+  border-radius: 6px;
+  border: 2px solid #1589C9;
+  background-color: #1589C9;
+  color: #FFF;
+  font-weight: 600;
 }
 
 button[type="submit"]:disabled {
   cursor: not-allowed;
-  border-color: #0074D9;
+  border-color: #E7E7E7;
   background-color: transparent;
-  color: #0074D9;
+  color: #E7E7E7;
 }

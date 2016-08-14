@@ -1,43 +1,40 @@
 ::placeholder {
-  color: #AAAAAA;
+  color: #232629;
 }
 
 *:focus {
   outline: none;
 }
 
-html {
-  background-color: #fff;
-}
-
-@media (max-width: 640px) {
-  html {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 320px) {
-  html {
-    font-size: 8px;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #333;
-  font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+  color: #232629;
+  font-size: 20px;
+  font-family: system,-apple-system,\.SFNSText-Regular,San Francisco,Roboto,Segoe UI,Helvetica Neue,Lucida Grande,sans-serif;
   line-height: 1.6;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
-em {
-  color: #AAAAAA;
-  font-style: italic;
+main {
+  width: 80%;
 }
 
 a {
-  color: #0074D9;
+  transition: all .0375s ease-in-out;
+  margin-right: .5rem;
+  letter-spacing: .0625rem;
+  color: #1589C9;
+  font-weight: 500;
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }

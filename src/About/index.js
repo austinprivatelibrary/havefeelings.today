@@ -24,14 +24,14 @@ export default class Form extends Component {
         <div className="about-wrapper">
           <div className="about-content">
             <p>Fill your humdrum face-to-face conversations with the joys of texting.</p>
-            <p><em>Feelings is brought to you by <a href="http://www.flipactual.com">Flip</a>.</em></p>
+            <p>👌🏼 <a href="https://www.flipactual.com">flipactual</a></p>
           </div>
         </div>
         <div
           className="about-toggle"
           onClick={this.toggle}
         >
-          {this.state.open ? 'Have Feelings Again' : 'Supplemental Knowledge'}
+          {this.state.open ? '🚮' : '❓'}
         </div>
       </div>
     );
