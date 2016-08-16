@@ -57,15 +57,6 @@ describe('Feelings', () => {
     Simulate.click(findRenderedDOMComponentWithClass(feelings, 'display'));
     findRenderedDOMComponentWithClass(feelings, 'form');
   });
-  it('doesn\'t display if emojis are not entered', () => {
-    const feelings = getFeelings();
-    const form = findRenderedDOMComponentWithTag(feelings, 'form');
-    const input = findRenderedDOMComponentWithTag(feelings, 'input');
-    input.value = 'yea u no it dawg';
-    Simulate.change(input);
-    Simulate.submit(form);
-    findRenderedDOMComponentWithClass(feelings, 'form');
-  });
   it('toggles the about screen', () => {
     const feelings = getFeelings();
     const about = findRenderedDOMComponentWithClass(feelings, 'about');

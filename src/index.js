@@ -6,10 +6,11 @@ import {
 import Feelings from './Feelings';
 
 import './reset.css';
-import './Feelings/index.css';
+import './Feelings/feelings.css';
 import './Display/display.css';
 import './Form/form.css';
 import './About/about.css';
+import './Suggestor/suggestor.css';
 
 render(
   <Feelings userAgent={window.navigator.userAgent} />,

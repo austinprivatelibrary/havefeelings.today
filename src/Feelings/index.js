@@ -9,6 +9,7 @@ import MobileDetect from 'mobile-detect';
 import Display from '../Display';
 import Form from '../Form';
 import About from '../About';
+import Suggestor from '../Suggestor';
 
 export default class Feelings extends Component {
   static propTypes = {
@@ -30,11 +31,9 @@ export default class Feelings extends Component {
   }
   @autobind
   doDisplay() {
-    if (this.state.emojis.length) {
-      this.setState({
-        displaying: true,
-      });
-    }
+    this.setState({
+      displaying: true,
+    });
   }
   @autobind
   dontDisplay() {
@@ -47,6 +46,12 @@ export default class Feelings extends Component {
           <Display
             emojis={this.state.emojis}
             dontDisplay={this.dontDisplay}
+          />
+        )}
+        {!this.state.displaying && (
+          <Suggestor
+            setEmojis={this.setEmojis}
+            doDisplay={this.doDisplay}
           />
         )}
         {!this.state.displaying && (
