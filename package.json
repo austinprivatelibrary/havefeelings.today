@@ -45,6 +45,7 @@
     "mocha": "^3.0.1",
     "postcss-loader": "^0.9.1",
     "react": "^15.3.0",
+    "react-addons-css-transition-group": "^15.3.0",
     "react-addons-test-utils": "^15.3.0",
     "react-dom": "^15.3.0",
     "react-transform-hmr": "^1.0.4",

@@ -17,4 +17,4 @@ render(
 );
 
 /* eslint-disable no-console */
-console.log('%c🕶👻', 'font-size: 128px;');
+console.log('%c🕶👻', 'font-size: 126px;');

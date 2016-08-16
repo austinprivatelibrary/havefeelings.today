@@ -2,6 +2,7 @@ import React, {
   Component,
   PropTypes,
 } from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { autobind } from 'core-decorators';
 
 export default class Display extends Component {
@@ -38,12 +39,18 @@ export default class Display extends Component {
   }
   render() {
     return (
-      <div
-        className="display"
-        onClick={this.stop}
+      <ReactCSSTransitionGroup
+        transitionName="display"
+        transitionAppear
+        transitionAppearTimeout={625}
       >
-        {this.state.currentEmoji}
-      </div>
+        <div
+          className="display"
+          onClick={this.stop}
+        >
+          {this.state.currentEmoji}
+        </div>
+      </ReactCSSTransitionGroup>
     );
   }
 }
