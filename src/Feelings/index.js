@@ -8,7 +8,6 @@ import MobileDetect from 'mobile-detect';
 
 import Display from '../Display';
 import Form from '../Form';
-import About from '../About';
 import Suggestor from '../Suggestor';
 
 export default class Feelings extends Component {
@@ -60,9 +59,6 @@ export default class Feelings extends Component {
             setEmojis={this.setEmojis}
             doDisplay={this.doDisplay}
           />
-        )}
-        {!this.state.displaying && (
-          <About />
         )}
       </div>
     );

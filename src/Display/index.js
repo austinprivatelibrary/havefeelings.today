@@ -43,6 +43,8 @@ export default class Display extends Component {
         transitionName="display"
         transitionAppear
         transitionAppearTimeout={625}
+        transitionEnterTimeout={0}
+        transitionLeaveTimeout={0}
       >
         <div
           className="display"

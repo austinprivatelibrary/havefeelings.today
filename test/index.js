@@ -57,12 +57,4 @@ describe('Feelings', () => {
     Simulate.click(findRenderedDOMComponentWithClass(feelings, 'display'));
     findRenderedDOMComponentWithClass(feelings, 'form');
   });
-  it('toggles the about screen', () => {
-    const feelings = getFeelings();
-    const about = findRenderedDOMComponentWithClass(feelings, 'about');
-    Simulate.click(findRenderedDOMComponentWithClass(feelings, 'about-toggle'));
-    assert.equal(findDOMNode(about).className, 'about is-open');
-    Simulate.click(findRenderedDOMComponentWithClass(feelings, 'about-toggle'));
-    assert.equal(findDOMNode(about).className, 'about');
-  });
 });
