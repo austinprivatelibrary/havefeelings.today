@@ -37,6 +37,17 @@ describe('Feelings', () => {
     Simulate.submit(findRenderedDOMComponentWithTag(feelings, 'form'));
     findRenderedDOMComponentWithClass(feelings, 'display');
   });
+  it('handles skin tones', done => {
+    const feelings = getFeelings();
+    const input = findRenderedDOMComponentWithTag(feelings, 'input');
+    input.value = '🙌🏻🙌🏼🙌🏽🙌🏾🙌🏿';
+    Simulate.change(input);
+    Simulate.submit(findRenderedDOMComponentWithTag(feelings, 'form'));
+    setTimeout(() => {
+      assert.equal(findRenderedDOMComponentWithClass(feelings, 'display').innerHTML, '🙌🏼');
+      done();
+    }, 1000);
+  });
   it('cycles emojis', done => {
     const feelings = getFeelings();
     const input = findRenderedDOMComponentWithTag(feelings, 'input');
@@ -48,7 +59,7 @@ describe('Feelings', () => {
       done();
     }, 1000);
   });
-  it('stops displays emojis', () => {
+  it('stops displaying emojis', () => {
     const feelings = getFeelings();
     const input = findRenderedDOMComponentWithTag(feelings, 'input');
     input.value = '🗝';

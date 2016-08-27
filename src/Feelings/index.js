@@ -10,6 +10,8 @@ import Display from '../Display';
 import Form from '../Form';
 import Suggestor from '../Suggestor';
 
+const SKIN_TONES = /🏻|🏼|🏽|🏾|🏿/;
+
 export default class Feelings extends Component {
   static propTypes = {
     userAgent: PropTypes.string.isRequired,
@@ -24,8 +26,17 @@ export default class Feelings extends Component {
   }
   @autobind
   setEmojis(input) {
+    const emojis = input.match(emojiRegex());
     this.setState({
-      emojis: input.match(emojiRegex()) || [],
+      emojis: input ? emojis.map((emoji, index) => {
+        if (index + 1 < emojis.length && emojis[index + 1].match(SKIN_TONES)) {
+          return emoji + emojis[index + 1].match(SKIN_TONES)[0];
+        }
+        if (emoji.match(SKIN_TONES)) {
+          return false;
+        }
+        return emoji;
+      }).filter(e => !!e) : [],
     });
   }
   @autobind
