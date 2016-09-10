@@ -15,6 +15,6 @@ render(
 
 /* eslint-disable no-console, max-len */
 setTimeout(() => {
-  console.log('%cFill your humdrum face-to-face conversations with the joys of texting.', 'font-weight: bold;');
+  console.log('%cFill your humdrum face-to-face conversations with the joys of texting', 'font-weight: bold;');
   console.log('%chttps://www.flipactual.com', 'font-weight: bold;');
 }, 1000);
