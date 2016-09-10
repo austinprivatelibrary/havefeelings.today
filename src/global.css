@@ -48,3 +48,12 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.display-appear {
+  opacity: 0;
+}
+
+.display-appear.display-appear-active {
+  opacity: 1;
+  transition: opacity 0.625s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}

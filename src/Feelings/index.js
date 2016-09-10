@@ -18,7 +18,7 @@ export default class Feelings extends Component {
   }
   constructor(props) {
     super(props);
-    this.isIos = new MobileDetect(this.props.userAgent).is('iOS');
+    this.isIos = new MobileDetect(props.userAgent).is('iOS');
     this.state = this.initialState = {
       displaying: false,
       emojis: [],
@@ -28,7 +28,7 @@ export default class Feelings extends Component {
   setEmojis(input) {
     const emojis = input.match(emojiRegex());
     this.setState({
-      emojis: input ? emojis.map((emoji, index) => {
+      emojis: emojis ? emojis.map((emoji, index) => {
         if (index + 1 < emojis.length && emojis[index + 1].match(SKIN_TONES)) {
           return emoji + emojis[index + 1].match(SKIN_TONES)[0];
         }
@@ -51,11 +51,12 @@ export default class Feelings extends Component {
   }
   render() {
     return (
-      <div className={`feelings${this.isIos ? ' is-ios' : ''}`}>
+      <div className="Feelings">
         {this.state.displaying && (
           <Display
             emojis={this.state.emojis}
             dontDisplay={this.dontDisplay}
+            isIos={!!this.isIos}
           />
         )}
         {!this.state.displaying && (

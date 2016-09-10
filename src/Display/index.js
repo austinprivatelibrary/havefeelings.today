@@ -3,12 +3,27 @@ import React, {
   PropTypes,
 } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import Radium from 'radium';
 import { autobind } from 'core-decorators';
 
+@Radium
 export default class Display extends Component {
+  static styles = {
+    Display: {
+      backgroundColor: '#FFF',
+      fontSize: '126px',
+      lineHeight: 1,
+      textAlign: 'center',
+    },
+    DisplayIos: {
+      fontSize: '1rem',
+      transform: 'scale(10)',
+    },
+  }
   static propTypes = {
     emojis: PropTypes.arrayOf(PropTypes.string).isRequired,
     dontDisplay: PropTypes.func.isRequired,
+    isIos: PropTypes.bool.isRequired,
   }
   constructor(props) {
     super(props);
@@ -47,7 +62,8 @@ export default class Display extends Component {
         transitionLeaveTimeout={0}
       >
         <div
-          className="display"
+          className="Display"
+          style={[Display.styles.Display, this.props.isIos && Display.styles.DisplayIos]}
           onClick={this.stop}
         >
           {this.state.currentEmoji}

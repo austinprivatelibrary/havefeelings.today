@@ -23,11 +23,7 @@ function getFeelings(userAgent) {
 describe('Feelings', () => {
   it('renders', () => {
     const feelings = getFeelings();
-    assert.equal(findDOMNode(feelings).className, 'feelings');
-  });
-  it('knows when it\'s iOS', () => {
-    const feelings = getFeelings('Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1');
-    assert.equal(findDOMNode(feelings).className, 'feelings is-ios');
+    assert.equal(findDOMNode(feelings).className, 'Feelings');
   });
   it('displays emojis', () => {
     const feelings = getFeelings();
@@ -35,7 +31,7 @@ describe('Feelings', () => {
     input.value = '👻';
     Simulate.change(input);
     Simulate.submit(findRenderedDOMComponentWithTag(feelings, 'form'));
-    findRenderedDOMComponentWithClass(feelings, 'display');
+    findRenderedDOMComponentWithClass(feelings, 'Display');
   });
   it('handles skin tones', done => {
     const feelings = getFeelings();
@@ -44,7 +40,7 @@ describe('Feelings', () => {
     Simulate.change(input);
     Simulate.submit(findRenderedDOMComponentWithTag(feelings, 'form'));
     setTimeout(() => {
-      assert.equal(findRenderedDOMComponentWithClass(feelings, 'display').innerHTML, '🙌🏼');
+      assert.equal(findRenderedDOMComponentWithClass(feelings, 'Display').innerHTML, '🙌🏼');
       done();
     }, 1000);
   });
@@ -55,7 +51,7 @@ describe('Feelings', () => {
     Simulate.change(input);
     Simulate.submit(findRenderedDOMComponentWithTag(feelings, 'form'));
     setTimeout(() => {
-      assert.equal(findRenderedDOMComponentWithClass(feelings, 'display').innerHTML, '🌓');
+      assert.equal(findRenderedDOMComponentWithClass(feelings, 'Display').innerHTML, '🌓');
       done();
     }, 1000);
   });
@@ -65,7 +61,7 @@ describe('Feelings', () => {
     input.value = '🗝';
     Simulate.change(input);
     Simulate.submit(findRenderedDOMComponentWithTag(feelings, 'form'));
-    Simulate.click(findRenderedDOMComponentWithClass(feelings, 'display'));
-    findRenderedDOMComponentWithClass(feelings, 'form');
+    Simulate.click(findRenderedDOMComponentWithClass(feelings, 'Display'));
+    findRenderedDOMComponentWithClass(feelings, 'Form');
   });
 });
